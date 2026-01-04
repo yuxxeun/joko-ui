@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Joko UI",
     images: [
       {
-        url: "/joko-ui.webp",
+        url: `${baseUrl}/joko-ui.webp`,
         width: 1200,
         height: 630,
         alt: "Joko UI - Free Tailwind CSS Components",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Joko UI - Free Tailwind CSS Components",
     description: "Free, open-source Tailwind CSS components. Copy-paste ready components to build beautiful, responsive websites faster.",
-    images: ["/joko-ui.webp"],
+    images: [`${baseUrl}/joko-ui.webp`],
   },
 };
 
