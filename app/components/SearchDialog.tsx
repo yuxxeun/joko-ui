@@ -143,7 +143,14 @@ export default function ComponentDialog({ isOpen, onClose }: ComponentDialogProp
                 ))}
               </div>
             ) : (
-              <div />
+              <div className="flex flex-col items-center justify-center py-12 text-center">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  No components found
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 max-w-sm">
+                  Try adjusting your search query or browse all available components
+                </p>
+              </div>
             )}
           </div>
 
