@@ -277,6 +277,7 @@ export const faq: ComponentType = {
     </div>
   </details>
 </div>`,
+      contributor: 'yuxxeun',
     }
   ],
 };
