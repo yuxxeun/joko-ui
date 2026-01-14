@@ -24,7 +24,7 @@ export const description_list: ComponentType = {
       <dl class="grid gap-8 sm:grid-cols-2 lg:gap-10">
         <div class="flex flex-col space-y-2">
           <dt class="text-lg md:text-xl font-semibold text-lime-600 dark:text-lime-300">
-            ⚡ Lightning Fast Performance
+            Lightning Fast Performance
           </dt>
           <dd class="text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Zero-dependency architecture delivers sub-50ms load times. Optimized bundle size means your users get instant experiences, even on slower connections.
@@ -33,7 +33,7 @@ export const description_list: ComponentType = {
 
         <div class="flex flex-col space-y-2">
           <dt class="text-lg md:text-xl font-semibold text-lime-600 dark:text-lime-300">
-            📱 Mobile-First Responsive
+            Mobile-First Responsive
           </dt>
           <dd class="text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Automatically adapts to any screen size with fluid layouts. From smartwatches to 4K displays, your UI looks pixel-perfect everywhere.
@@ -42,7 +42,7 @@ export const description_list: ComponentType = {
 
         <div class="flex flex-col space-y-2">
           <dt class="text-lg md:text-xl font-semibold text-lime-600 dark:text-lime-300">
-            ♿ Accessibility Built-In
+            Accessibility Built-In
           </dt>
           <dd class="text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
             WCAG 2.1 AAA compliant out of the box. Screen reader friendly, keyboard navigable, and focus-visible states included by default.
@@ -51,7 +51,7 @@ export const description_list: ComponentType = {
 
         <div class="flex flex-col space-y-2">
           <dt class="text-lg md:text-xl font-semibold text-lime-600 dark:text-lime-300">
-            🎨 Theme Customization
+            Theme Customization
           </dt>
           <dd class="text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Match your brand identity in minutes. Override colors, fonts, and spacing with Tailwind utilities or define custom design tokens.
