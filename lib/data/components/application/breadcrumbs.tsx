@@ -24,8 +24,7 @@ export const breadcrumbs: ComponentType = {
     {
       id: 'simple',
       name: 'Simple Breadcrumb',
-      code: `
-<nav aria-label="Breadcrumb" class="flex">
+      code: `<nav aria-label="Breadcrumb" class="flex">
   <ol class="flex overflow-hidden rounded-lg border border-gray-200 text-gray-600 dark:border-gray-700 dark:text-gray-200">
     <li class="flex items-center">
       <a
@@ -79,14 +78,13 @@ export const breadcrumbs: ComponentType = {
       </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
+      contributor: "rayasabari",
     },
     {
       id: 'chevron',
       name: 'Chevron Breadcrumb',
-      code: `
-<nav aria-label="Breadcrumb">
+      code: `<nav aria-label="Breadcrumb">
   <ol class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300">
     <li>
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100">
@@ -147,14 +145,13 @@ export const breadcrumbs: ComponentType = {
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100"> Plain Tee </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
+      contributor: "rayasabari",
     },
     {
       id: 'slash',
       name: 'Slash Breadcrumb',
-      code: `
-<nav aria-label="Breadcrumb">
+      code: `<nav aria-label="Breadcrumb">
   <ol class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300">
     <li>
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100">
@@ -193,14 +190,13 @@ export const breadcrumbs: ComponentType = {
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100"> Plain Tee </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
+      contributor: "rayasabari",
     },
     {
       id: 'with-icons',
       name: 'Breadcrumb with Icons',
-      code: `
-<nav aria-label="Breadcrumb">
+      code: `<nav aria-label="Breadcrumb">
   <ol class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
     <li>
       <a href="#" class="flex items-center gap-2 transition hover:text-gray-700 dark:hover:text-gray-200">
@@ -281,14 +277,13 @@ export const breadcrumbs: ComponentType = {
       </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
+      contributor: "rayasabari",
     },
     {
       id: 'collapsed',
       name: 'Collapsed Breadcrumb',
-      code: `
-<nav aria-label="Breadcrumb">
+      code: `<nav aria-label="Breadcrumb">
   <ol class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300">
     <li>
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100"> Home </a>
@@ -357,14 +352,13 @@ export const breadcrumbs: ComponentType = {
       <a href="#" class="block transition hover:text-gray-700 dark:hover:text-gray-100"> Plain Tee </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
+      contributor: "rayasabari",
     },
     {
       id: 'background',
       name: 'Background Breadcrumb',
-      code: `
-<nav aria-label="Breadcrumb">
+      code: `<nav aria-label="Breadcrumb">
   <ol
     class="flex items-center gap-1 rounded-md bg-white p-2 shadow-sm dark:bg-gray-900 dark:shadow-gray-800 text-sm text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-800"
   >
@@ -418,8 +412,7 @@ export const breadcrumbs: ComponentType = {
       </a>
     </li>
   </ol>
-</nav>
-      `,
+</nav>`,
     },
   ],
 };
