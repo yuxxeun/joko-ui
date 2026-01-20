@@ -6,7 +6,7 @@ import { useTheme } from './ThemeProvider';
 import Logo from './Logo';
 import SearchDialog from './SearchDialog';
 
-// Hook to detect if we're on client side
+// Hook to detect if we're on client side (fixes hydration mismatch without lint errors)
 function useIsClient() {
   return useSyncExternalStore(
     () => () => {},
@@ -84,7 +84,7 @@ export default function Header() {
               aria-label="Toggle theme"
             >
               {!isClient ? (
-                // Placeholder icon during SSR
+                // Placeholder during SSR to prevent hydration mismatch
                 <div className="w-5 h-5" />
               ) : theme === 'light' ? (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -108,7 +108,8 @@ export default function Header() {
             </button>
 
             {/* GitHub Link */}
-            <a
+            <Link
+              prefetch
               href="https://github.com/rayasabari/joko-ui"
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +123,7 @@ export default function Header() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -149,6 +150,7 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-2">
               <Link
+                prefetch
                 href="/components/application"
                 className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
@@ -156,6 +158,7 @@ export default function Header() {
                 Application Components
               </Link>
               <Link
+                prefetch
                 href="/components/marketing"
                 className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
