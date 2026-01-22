@@ -5,8 +5,9 @@ import { useState, useSyncExternalStore } from 'react';
 import { useTheme } from './ThemeProvider';
 import Logo from './Logo';
 import SearchDialog from './SearchDialog';
+import { usePathname } from 'next/navigation';
 
-// Hook to detect if we're on client side (fixes hydration mismatch without lint errors)
+// Hook to detect if we're on client side (fixes hydration mismatch)
 function useIsClient() {
   return useSyncExternalStore(
     () => () => {},
@@ -20,11 +21,16 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const isClient = useIsClient();
+  const pathname = usePathname();
 
   // Handle mobile menu and dialog together
   const handleSearchOpen = () => {
     setIsDialogOpen(true);
     setIsMenuOpen(false);
+  };
+
+  const isActive = (path: string) => {
+    return pathname?.startsWith(path);
   };
 
   return (
@@ -39,13 +45,21 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-6">
               <Link
                 href="/components/application"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className={`transition-colors font-medium ${
+                  isClient && isActive('/components/application')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 Application
               </Link>
               <Link
                 href="/components/marketing"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className={`transition-colors font-medium ${
+                  isClient && isActive('/components/marketing')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 Marketing
               </Link>
@@ -109,7 +123,6 @@ export default function Header() {
 
             {/* GitHub Link */}
             <Link
-              prefetch
               href="https://github.com/rayasabari/joko-ui"
               target="_blank"
               rel="noopener noreferrer"
@@ -150,17 +163,19 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-2">
               <Link
-                prefetch
                 href="/components/application"
-                className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
+                className={`px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium ${
+                  isClient && isActive('/components/application') ? 'bg-secondary' : ''
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Application Components
               </Link>
               <Link
-                prefetch
                 href="/components/marketing"
-                className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
+                className={`px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium ${
+                  isClient && isActive('/components/marketing') ? 'bg-secondary' : ''
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Marketing Components
